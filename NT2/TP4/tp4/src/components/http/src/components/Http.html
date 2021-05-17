@@ -1,0 +1,28 @@
+<section class="src-components-http">
+
+    <div class="jumbotron">
+
+        <button class="btn btn-danger my-3 mr-3" @click="getPostsCb()">Pedir XMLHttpRequest</button>    
+        <button class="btn btn-warning my-3 mr-3" @click="getPostsFetch()">Pedir FETCH</button>    
+        <button class="btn btn-success my-3 mr-3" @click="getPostsAxios()">Pedir AXIOS</button>    
+
+        <div v-if="posts.length" class="table-responsive">
+
+            <table class="table table-dark">
+                <tr>
+                    <th v-for="(col,index) in getCols" :key="index">{{col}}</th>
+                </tr>
+                <tr v-for="(post,index) in posts" :key="index">
+                    <td v-for="(col,index) in getCols" :key="index">{{post[col]}}</td>
+                </tr>
+            </table>
+            
+            <h4 class="alert alert-primary">Se encontraron {{posts.length}} datos</h4>
+        
+        </div>
+
+        <h4 v-else class="alert alert-danger">No se encontraron datos</h4>
+
+    </div>
+
+</section>
