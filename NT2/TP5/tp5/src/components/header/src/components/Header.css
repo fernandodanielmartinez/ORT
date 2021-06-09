@@ -1,0 +1,22 @@
+.src-components-header {
+
+}
+
+#header {
+	transition: all 0.3s;
+	background: steelblue;
+	text-transform: uppercase;
+	text-align: center;
+	margin: 0;
+	color: white;
+}
+
+#colorDisplay {
+	font-size: 200%;
+}
+
+h1 {
+	font-size: 32px;
+	margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+}

@@ -1,0 +1,20 @@
+<section class="src-components-navigator">
+
+	<div id="navigator">
+		<button id="reset" @click="resetButton">{{ resetButtonText }}</button>
+		<span id="message">{{ navigatorMessage }}</span>
+
+		<button id="easy" :class="getClass(!isHard)" @click="easyButton">easy</button>
+		<button id="hard" :class="getClass(isHard)" @click="hardButton">hard</button>
+
+		<Body 
+			:squaresQty="squaresQty" 
+			:isHard="isHard" 
+			:colors="colors" 
+			:pickedColor="pickedColor" 
+			@navigatorMessage="navigatorMessage=$event"
+			@resetButtonText="resetButtonText=$event"
+		/>
+	</div>
+
+</section>

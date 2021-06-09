@@ -1,0 +1,37 @@
+<section class="src-components-body">
+
+    <div id="container">
+
+        <Square 
+            :colors="setColors ? setColors : colors[0]" 
+            :pickedColor="pickedColor"
+            @colorSelected="colorSelected=$event" />
+        <Square 
+            :colors="setColors ? setColors : colors[1]" 
+            :pickedColor="pickedColor"
+            @colorSelected="colorSelected=$event" />
+        <Square 
+            :colors="setColors ? setColors : colors[2]" 
+            :pickedColor="pickedColor"
+            @colorSelected="colorSelected=$event" />
+
+        <div v-show="isHard">
+            
+            <Square 
+                :colors="setColors ? setColors : colors[3]" 
+                :pickedColor="pickedColor"
+                @colorSelected="colorSelected=$event" />
+            <Square 
+                :colors="setColors ? setColors : colors[4]" 
+                :pickedColor="pickedColor"
+                @colorSelected="colorSelected=$event" />
+            <Square 
+                :colors="setColors ? setColors : colors[5]" 
+                :pickedColor="pickedColor"
+                @colorSelected="colorSelected=$event" />
+            
+        </div>
+
+    </div>
+
+</section>

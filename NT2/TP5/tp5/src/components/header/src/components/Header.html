@@ -1,0 +1,11 @@
+<section class="src-components-header"> 
+
+	<div id="header" :style="setColor()">
+		<h1>The Great <br>
+    <span id="colorDisplay">{{ rgbHeader }}</span>
+    <br>
+    Guessing Game</h1>
+    <Navigator @rgbHeader="rgbHeader=$event" @headerBackGColor="headerBackGColor=$event"/>
+	</div>
+
+</section>
