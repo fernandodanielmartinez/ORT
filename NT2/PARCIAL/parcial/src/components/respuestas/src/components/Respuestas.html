@@ -1,0 +1,21 @@
+<section class="src-components-respuestas">
+
+    <div class="jumbotron">
+
+        <table class="table table-dark">
+
+            <tr>
+              <th>Numero de Pregunta</th>
+              <th>Respuesta</th>
+            </tr>
+    
+            <tr v-for="(pregunta, index) in preguntas">
+              <td>{{pregunta.numero}}</td>
+              <td>{{pregunta.respuestas}}</td>
+            </tr>
+
+        </table>
+                
+    </div>
+
+</section>

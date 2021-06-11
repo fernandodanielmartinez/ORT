@@ -1,0 +1,34 @@
+<section class="src-components-alumnos">
+
+    <div class="jumbotron">
+
+        <div v-if="alumnos.length" class="table-responsive">
+
+            <table class="table table-dark">
+
+                <tr>
+                  <th>Alumno</th>
+                  <th>Nota</th>
+                </tr>
+        
+                <tr v-for="(alumno, index) in alumnos">
+                  <td>{{alumno.nombre}} {{alumno.apellido}}</td>
+                  <td :style="setColor(alumno.nota)">{{alumno.nota}}</td>
+                </tr>
+
+                <br>
+
+                <tr>
+                  <td>Promedio Total</td>
+                  <td :style="setColor(calcularPromedioTotal())">{{calcularPromedioTotal()}}</td>
+                </tr>
+
+            </table>
+                    
+        </div>
+
+        <h4 v-else class="alert alert-danger">No se encontraron datos</h4>
+
+    </div>
+
+</section>
