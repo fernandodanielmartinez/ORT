@@ -1,0 +1,13 @@
+<section class="src-components-navigator">
+
+	<div id="navigator">
+		<button id="reset" @click="resetButton">{{ this.$store.state.resetButtonText }}</button>
+		<span id="message">{{ this.$store.state.navigatorMessage }}</span>
+
+		<button id="easy" :class="getClass(!this.$store.state.isHard)" @click="easyButton">easy</button>
+		<button id="hard" :class="getClass(this.$store.state.isHard)" @click="hardButton">hard</button>
+
+		<Body />
+	</div>
+
+</section>

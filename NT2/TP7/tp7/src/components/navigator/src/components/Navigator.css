@@ -1,0 +1,42 @@
+.src-components-navigator {
+
+}
+
+#navigator {
+	background: #ffffff;
+	height: 30px;
+	text-align: center;
+	margin: 0;
+	margin-top: -30px;
+}
+
+#message {
+	color: #000000;
+	display: inline-block;
+	width: 20%;
+	font-family: "Montserrat", "Avenir";
+	text-transform: capitalize;
+}
+
+.selected {
+	background-color: steelblue;
+	color: white;
+}
+
+button {
+	border: none;
+	background-color: white;
+	font-family: "Montserrat", "Avenir";
+	text-transform: uppercase;
+	height: 100%;
+	font-weight: 700;
+	letter-spacing: 1px;
+	color: steelblue;
+	transition: all 0.3s;
+	outline: none;
+}
+
+button:hover {
+	color: white;
+	background-color: steelblue;
+}

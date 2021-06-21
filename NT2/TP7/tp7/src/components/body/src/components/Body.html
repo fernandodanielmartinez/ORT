@@ -1,0 +1,19 @@
+<section class="src-components-body">
+
+    <div id="container">
+
+        <Square :color="setColors ? setColors : this.$store.state.colors[0]" />
+        <Square :color="setColors ? setColors : this.$store.state.colors[1]" />
+        <Square :color="setColors ? setColors : this.$store.state.colors[2]" />
+
+        <div v-show="this.$store.state.isHard">
+            
+            <Square :color="setColors ? setColors : this.$store.state.colors[3]" />
+            <Square :color="setColors ? setColors : this.$store.state.colors[4]" />
+            <Square :color="setColors ? setColors : this.$store.state.colors[5]" />
+            
+        </div>
+
+    </div>
+
+</section>
