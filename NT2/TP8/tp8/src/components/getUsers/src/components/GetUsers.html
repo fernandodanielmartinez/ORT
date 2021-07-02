@@ -1,0 +1,24 @@
+<section class="src-components-http">
+
+    <div class="jumbotron">
+
+        <div v-if="this.$store.state.users.length" class="table-responsive">
+
+            <table class="table table-dark">
+                <tr>
+                    <th v-for="(col,index) in getCols" :key="index">{{col}}</th>
+                </tr>
+                <tr v-for="(user,index) in this.$store.state.users" :key="index">
+                    <td v-for="(col,index) in getCols" :key="index">{{user[col]}}</td>
+                </tr>
+            </table>
+            
+            <h4 class="alert alert-primary">Se encontraron {{this.$store.state.users.length}} datos</h4>
+        
+        </div>
+
+        <h4 v-else class="alert alert-danger">No se encontraron datos</h4>
+
+    </div>
+
+</section>
